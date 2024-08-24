@@ -99,6 +99,11 @@ header .title .name {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
+@media screen and (max-width: 470px) {
+  header .title .name {
+    line-height: 1;
+  }
+}
 header .title .job {
   font-size: var(--header-job-size);
   color: #2c2e3a;
@@ -108,13 +113,17 @@ header .socials {
   display: flex;
   align-items: flex-end;
   height: 100%;
-  font-size: 1.4em;
   padding-right: 7px;
 }
-@media screen and (min-width: 886px) and (max-width: 975px) {
+@media screen and (max-width: 571px), screen and (min-width: 886px) and (max-width: 975px) {
   header .socials {
     flex-direction: column;
     justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 571px) {
+  header .socials {
+    font-size: 1.4em;
   }
 }
 header .socials li {
