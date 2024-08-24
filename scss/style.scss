@@ -37,11 +37,18 @@ header{
         --header-name-size: 40px;
         --header-job-size: 20px;
     }
-    @media screen and (max-width: 714px){
+    @media screen and (min-width: 403px) and (max-width: 714px){
         --header-height: 100px;
         --header-letters-size: 50px;
         --header-name-size: 30px;
         --header-job-size: 16px;
+    }
+    @media screen and (max-width: 402px)
+    {
+        --header-height: 100px;
+        --header-letters-size: 50px;
+        --header-name-size: 30px;
+        --header-job-size: 14px;
     }
 
     z-index: 100;
@@ -300,6 +307,9 @@ h2, h3{
             .image-container{
                 margin: 0 10px 14px 10px;
                 box-shadow: 4px 4px 0 2px $mainColor;
+            }
+            .description{
+                text-align: justify;
             }
         }
     }

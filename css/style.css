@@ -51,12 +51,20 @@ header {
     --header-job-size: 20px;
   }
 }
-@media screen and (max-width: 714px) {
+@media screen and (min-width: 403px) and (max-width: 714px) {
   header {
     --header-height: 100px;
     --header-letters-size: 50px;
     --header-name-size: 30px;
     --header-job-size: 16px;
+  }
+}
+@media screen and (max-width: 402px) {
+  header {
+    --header-height: 100px;
+    --header-letters-size: 50px;
+    --header-name-size: 30px;
+    --header-job-size: 14px;
   }
 }
 header .letters {
@@ -328,6 +336,9 @@ h2, h3 {
   .tile-image-skew.image-left .image-container, .tile-image-skew.image-right .image-container, .tile-image-top.image-left .image-container, .tile-image-top.image-right .image-container {
     margin: 0 10px 14px 10px;
     box-shadow: 4px 4px 0 2px #da9749;
+  }
+  .tile-image-skew.image-left .description, .tile-image-skew.image-right .description, .tile-image-top.image-left .description, .tile-image-top.image-right .description {
+    text-align: justify;
   }
 }
 
