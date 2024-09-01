@@ -21,6 +21,7 @@
                 }
             });
         });
+        document.getElementById('show-credits').addEventListener('click', e => showPopup('credits'));
         document.getElementById('button-show-paragon-popup').addEventListener('click', e => showPopup('paragon'));
 
         let copyTimeout = null;
@@ -46,8 +47,11 @@
     const showPopup = name => {
         const popups = document.getElementById('popups');
         popups.style.display = 'flex';
+        document.querySelectorAll('.popup').forEach(el => {
+            el.style.display = 'none';
+        });
         document.getElementById('popup-' + name).style.display = 'block';
         setTimeout(() => { popups.classList.add('show'); }, 100);
-    }
+    };
 
 })();
