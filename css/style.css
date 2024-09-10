@@ -177,12 +177,6 @@ nav ul li {
   border-left: 3px solid #2c2e3a;
   border-right: 3px solid #2c2e3a;
   transition-duration: 0.3s;
-  /* &:last-child{
-      a{
-          text-transform: lowercase;
-          span{color: $mainColor;}
-      }
-  } */
 }
 nav ul li:hover {
   border-left: 3px solid #da9749;
@@ -194,6 +188,12 @@ nav ul li a {
   text-transform: uppercase;
   font-weight: 600;
   transform: skew(15deg, 0);
+}
+nav ul li:last-child a {
+  text-transform: lowercase;
+}
+nav ul li:last-child a span {
+  color: #da9749;
 }
 
 h2, h3 {

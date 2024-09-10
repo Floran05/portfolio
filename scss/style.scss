@@ -166,13 +166,12 @@ nav{
                 font-weight: 600;
                 transform: skew($skewDeg, 0);
             }
-
-            /* &:last-child{
+            &:last-child{
                 a{
                     text-transform: lowercase;
                     span{color: $mainColor;}
                 }
-            } */
+            }
         }
     }
 }
