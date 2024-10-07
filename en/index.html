@@ -42,6 +42,9 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="../index.html">fr | <span>en</span></a></li>
             </ul>
+            <div class="mobile-toggle-menu" id="mobile-toggle-menu">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </nav>
 
         <div class="wrapper">
@@ -87,7 +90,23 @@
             <section class="project-section" id="projects">
                 <h2>Projects</h2>
 
-                <ul>
+                <div class="projects-type-switch" id="projects-type-switch">
+                    <div class="switch-left-text">
+                        <span class="switch-text">Video games projects</span>
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="switch" id="switch">
+                        <div class="switch-circle" id="switch-circle">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </div>
+                    <div class="switch-right-text">
+                        <i class="fas fa-code"></i>
+                        <span class="switch-text">Software development projects</span>
+                    </div>
+                </div>
+
+                <ul id="video-games-projects">
                     <li class="tile-image-skew image-left">
                         <div class="image-container multiverse-lab-border-animate">
                             <img src="../medias/img/MultiverseLab.png" alt="Multiverse Lab">
@@ -96,7 +115,7 @@
                             <h3>Multiverse Lab</h3>
                             <div class="text">
                                 <p>
-                                    "Why not me ?"
+                                    "Why shouldn't I ?"
                                 </p>
                                 <p>
                                     I asked myself this question at the beginning of 2024, realizing that working in video games was really what I wanted to do most. But I'd never had the ambition to do it as a solo developer.
@@ -108,6 +127,9 @@
                                     It will be a highly cooperative multiplayer Action RPG, in which players will have to use each other's skills to escape from a labyrinth. With the help of a mysterious purple energy, 
                                     players will be able to travel through several multiverses to find elements that will enable them to progress towards the exit.
                                 </p>
+                            </div>
+                            <div class="button-more center-button">
+                                <a class="btn" href="MultiverseLab.html">See more</a>
                             </div>
                         </div>
                     </li>
@@ -201,6 +223,147 @@
                             </div>
                             <div class="button-more center-button">
                                 <a href="https://gitlab.com/Fabuloup/rallye-project" class="btn">See on Gitlab</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="soft-dev-projects" id="soft-dev-projects">
+                    <li class="tile-image-skew image-left">
+                        <div class="image-container">
+                            <img src="../medias/img/MultilabelClassificationPython.png" alt="Image de code de l'IA">
+                        </div>
+                        <div class="description">
+                            <h3>AI-based skills identification system</h3>
+                            <div class="text">
+                                <p>
+                                    During my last year of master's degree, I had the chance to carry out an internship in the FEMTO-ST laboratory, with a project in the field 
+                                    of artificial intelligence, an area that seemed so complex that i tought it inaccessible.
+                                </p>
+                                <p>
+                                    The objective of this project was to carry out an application module capable of identifying the skills that a student masters, by analizing 
+                                    an evaluation exercise. This module was intended to be integrated into a course revisions application, on which I was able to work, and which 
+                                    I detail in the next tile.
+                                </p>
+                                <p>
+                                    So I discovered the Natural Language Processing (NLP) AI techniques, with in particular the multilabel classification technique, which I used 
+                                    in this project. This technique consists in teaching artificial intelligence how to associate elements of a text with a label, so that it 
+                                    is later, capable of carrying out the reverse : identifying all labels in a new text.
+                                </p>
+                                <p>
+                                    In our case, the labels represented the skills to be identified and we were able to train AI for algorithmic and english. Thus, the skills 
+                                    could be on the one hand, "knowing how to write a conditional structure", and on the other, "knowing how to use -ing verbs".
+                                </p>
+                                <p>
+                                    This AI can therefore, in theory, apply to any subject, taking into account that it still takes a minimum amount of data to train it. This 
+                                    notion posed us problem during the project, because it is more difficult to obtain correct results with an AI trained on a very poor dataset.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-right">
+                        <div class="image-container specific-nao">
+                            <img src="../medias/img/NaoFemto-ST.png" alt="Image du robot Nao">
+                        </div>
+                        <div class="description">
+                            <h3>Course revision application</h3>
+                            <div class="text">
+                                <p>
+                                    Following the final year of my Master's project, the FEMTO-ST laboratory offered me the chance to continue the project for a further two years.
+                                    I took part in the development of the Artificial Intelligence Virtual Trainer (AI-VT) application, which already existed when I arrived. Based
+                                    on a case-based reasoning system, it enables students to revise their courses by generating a personalized list of execises for each revision session. 
+                                    In the version I worked on, personalization was enabled by the teacher, who had to mark each exercise completed by each student. In this way, the system 
+                                    was able to identify the student's progress and propose a progression in the exercises.
+                                </p>
+                                <p>
+                                    My first task was to integrate the module created during the internship into the application. The aim of this module was to create a profile of a student 
+                                    using the application for the first time, identifying the skills he still needs to work on, so that he could have a personalized experience right from the 
+                                    first revision exercises.
+                                </p>
+                                <p>
+                                    I subsequently redeveloped and modernized the application, originally coded in PHP in 2014, rewriting it in Javascript with NodeJS and improving the 
+                                    interfaces to make them more up-to-date.
+                                </p>
+                                <p>
+                                    A new player was later added to the project : a humanoid robot, Nao. The aim was to make revision sessions more dynamic by adding interaction between the 
+                                    student and the robot. I was in charge of interfacing the application with Nao to enable ergonomic control of the robot, but also to enable it to react
+                                    automatically during a revision session.
+                                </p>
+                                <p>
+                                    Whereas the classic revision system could be used by any type of user, the sessions with Nao were aimed at a younger audience. We had the opportunity to 
+                                    carry out an experiment in a nursery school, to make pupils revise English lessons. For example, Nao could ask what color his eyes were, or show him a card 
+                                    with a certain number written on it (the robot identified the cards using a QR code).
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-left">
+                        <div class="image-container">
+                            <img src="../medias/img/DemocraticRepublicOfCongoCholeraApp.png" alt="Image du l'application">
+                        </div>
+                        <div class="description">
+                            <h3>Cholera data formatting application for the Democratic Republic of Congo</h3>
+                            <div class="text">
+                                <p>
+                                    For my 3<sup>rd</sup> year Bachelor's degree internship in the Chrono-environnement laboratory, the project concerned data on cholera in the 
+                                    Democratic Republic of Congo. The aim was to create an application that would enable scientists to format their data easily and in different formats,
+                                    and to generate PDF reports of the conclusions they could draw from it.
+                                </p>
+                                <p>
+                                    The application was built as a web application with a server side in PHP, and its primary aim was to offer its features in an ergonomic and simple 
+                                    way, so that it could be used by people who are not specialists in computer sciences. This meant that data could be imported and displayed in the 
+                                    form of tables, graphs or maps. Once the scientist had filtered the data he wished to highlight, he could add the table, graph or map to a report 
+                                    and add his comments, finally exporting the report as a PDF.
+                                </p>
+                                <p>
+                                    Towards the end of the project, the application was deployed on a laboratory server for internal access.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-right">
+                        <div class="image-container">
+                            <img class="specific-toolbox-maintenance" src="../medias/img/ToolboxIndustrialMaintenance.png" alt="Image de l'application">
+                        </div>
+                        <div class="description">
+                            <h3>Application toolkit for an industrial maintenance company</h3>
+                            <div class="text">
+                                <p>
+                                    Initially, I suggested to a member of my family, who owns an industrial maintenance company, that I create an application that would help him 
+                                    save time on administrative tasks, and in particular with his invoicing.
+                                </p>
+                                <p>
+                                    With his very own way of doing things, I created this web application (NodeJS), adapting it to his needs, while suggesting possible improvements 
+                                    that he wouldn't necessarily be aware of, such as using speech-to-text to fill in certain information by speaking, rather than having to write 
+                                    everthing on a keyboard.
+                                </p>
+                                <p>
+                                    Today, I maintain this application and regularly add various features to help him in his work, with, for example, recently, a system that allows 
+                                    him to list his equipment and identify where it is stored.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-left specific-toolbox" >
+                        <div class="image-container">
+                            <img src="../medias/img/Toolbox.png" alt="Image de l'application">
+                        </div>
+                        <div class="description">
+                            <h3>Personal application toolkit</h3>
+                            <div class="text">
+                                <p>
+                                    Like many developers, I think, I've created an application that lets you perform a variety of useful tasks on a regular basis, such as :
+                                    <ul>
+                                        <li>A wallpaper manager, with a system of albums that change the image regularly</li>
+                                        <li>
+                                            A task scheduler, since I've never found a tool that does things the way I want them done
+                                        </li>
+                                        <li>
+                                            A youtube-dl wrapper (a command-line tool for downloading various content from the internet), so I don't have to deal with the numerous 
+                                            command-line parameters
+                                        </li>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                     </li>

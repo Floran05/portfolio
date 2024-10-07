@@ -42,6 +42,9 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="en/index.html"><span>fr</span> | en</a></li>
             </ul>
+            <div class="mobile-toggle-menu" id="mobile-toggle-menu">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </nav>
 
         <div class="wrapper">
@@ -88,7 +91,23 @@
             <section class="project-section" id="projects">
                 <h2>Projets</h2>
 
-                <ul>
+                <div class="projects-type-switch" id="projects-type-switch">
+                    <div class="switch-left-text">
+                        <span class="switch-text">Projets de jeux vidéo</span>
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="switch" id="switch">
+                        <div class="switch-circle" id="switch-circle">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </div>
+                    <div class="switch-right-text">
+                        <i class="fas fa-code"></i>
+                        <span class="switch-text">Projets de développement logiciel</span>
+                    </div>
+                </div>
+
+                <ul id="video-games-projects">
                     <li class="tile-image-skew image-left">
                         <div class="image-container multiverse-lab-border-animate">
                             <img src="medias/img/MultiverseLab.png" alt="Image du jeu Multiverse Lab">
@@ -111,6 +130,9 @@
                                     s'échapper d'un labyrinthe. À l'aide d'une mystérieuse énergie violette, les joueurs pourront voyager au travers de plusieurs multivers afin 
                                     de trouver des éléments leur permettant d'évoluer vers la sortie.
                                 </p>
+                            </div>
+                            <div class="button-more center-button">
+                                <a class="btn" href="fr/MultiverseLab.html">Voir plus</a>
                             </div>
                         </div>
                     </li>
@@ -208,6 +230,155 @@
                             </div>
                             <div class="button-more center-button">
                                 <a href="https://gitlab.com/Fabuloup/rallye-project" class="btn">Voir sur Gitlab</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="soft-dev-projects" id="soft-dev-projects">
+                    <li class="tile-image-skew image-left">
+                        <div class="image-container">
+                            <img src="medias/img/MultilabelClassificationPython.png" alt="Image de code de l'IA">
+                        </div>
+                        <div class="description">
+                            <h3>Système d'identification de compétences basé sur l'IA</h3>
+                            <div class="text">
+                                <p>
+                                    Lors de ma dernière année de master informatique, j'ai eu la chance de pouvoir réaliser un stage de découverte du monde de 
+                                    la recherche dans le laboratoire FEMTO-ST, avec un projet dans le domaine de l'intelligence artificielle, un domaine qui me 
+                                    semblait tellement complexe que je le pensais inaccessible.
+                                </p>
+                                <p>
+                                    L'objectif de ce projet était de réaliser un module applicatif capable d'identifier les compétences qu'un étudiant 
+                                    maîtrise, en analisant un exercice d'évaluation. Ce module était destiné à être intégré à une application de révisions de 
+                                    cours, sur laquelle j'ai pu travaillé, et que je détaille dans la prochaine tuile.
+                                </p>
+                                <p>
+                                    J'ai donc découvert les techniques d'IA de traitement du langage naturel (NLP), avec notamment la technique de classification 
+                                    multilabel, que j'ai utilisée dans ce projet. Cette technique consiste à apprendre à l'intelligence artificielle comment 
+                                    associer des éléments d'un texte à un label, pour qu'elle soit par la suite, capable de réaliser l'inverse : identifier tous les 
+                                    labels dans un nouveau texte.
+                                </p>
+                                <p>
+                                    Dans notre cas, les labels représentaient les compétences à identifier et nous avons pu entraîner l'IA pour de l'algorithmique 
+                                    et de l'anglais. Ainsi, les compétences pouvaient être d'un côté, "Savoir écrire une structure conditionnelle", et de l'autre,
+                                    "Savoir comment employer les verbes en -ing".
+                                </p>
+                                <p>
+                                    Cette IA peut donc, en théorie, s'appliquer à n'importe quelle matière, en prenant en compte qu'il faut tout de même une quantité 
+                                    minimale de données pour l'entraîner. Cette notion nous a posé problème durant le projet, car il est plus difficile d'obtenir des 
+                                    résultats corrects avec une IA entraînée sur un jeu de données très faible.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-right">
+                        <div class="image-container specific-nao">
+                            <img src="medias/img/NaoFemto-ST.png" alt="Image du robot Nao">
+                        </div>
+                        <div class="description">
+                            <h3>Application de révisions de cours</h3>
+                            <div class="text">
+                                <p>
+                                    Suite au stage de dernière année de master, le laboratoire FEMTO-ST m'a proposé de continuer le projet durant deux ans. J'ai ainsi participé 
+                                    au développement de l'application Artificial Intelligence Virtual Trainer (AI-VT), déjà existante à mon arrivée. Basée sur un système de 
+                                    raisonnement à partir de cas, elle permet aux étudiants de réviser leurs cours en générant une liste personnalisée d'exercices à 
+                                    chaque session de révision. Dans la version sur laquelle j'ai travaillée, la personnalisation était permise grâce à l'enseignant, qui devait noter 
+                                    chaque exercice réalisé par chaque étudiant. Ainsi, le système était capable d'identifier la progression de l'étudiant et ainsi de proposer une évolution 
+                                    dans les exercices.
+                                </p>
+                                <p>
+                                    Ma première tâche a été d'intégrer le module créé lors du stage de master à l'application. Ce module avait pour objectif
+                                    de créer un profil d'un étudiant qui utilise l'application pour la première fois en déterminant quelles sont les compétences qui lui restent à 
+                                    travailler, pour qu'il puisse avoir une expérience personnalisée dès les premiers exercices de révision.
+                                </p>
+                                <p>
+                                    J'ai par la suite, redéveloppé et modernisé l'application, initialement codée en PHP en 2014, en la réécrivant en Javascript avec NodeJS 
+                                    et en améliorant les interfaces pour les rendre plus actuelles.
+                                </p>
+                                <p>
+                                    Un nouvel acteur est apparu plus tard dans le projet : un robot humanoïde Nao. L'objectif était de dynamiser les séances de révisions en ajoutant
+                                    de l'interaction entre l'étudiant et ce robot. J'ai été en charge d'interfacer l'application avec Nao afin de permettre un contrôle ergonomique du robot, 
+                                    mais également pour qu'il puisse réagir automatiquement lors d'une séance de révision.
+                                </p>
+                                <p>
+                                    Là où le système de révision classique pouvait être utilisé par n'importe quel type d'utilisateur, les séances avec Nao étaient destinées à 
+                                    un public plus jeune. Nous avons eu l'occasion de réaliser une expérience dans une école maternelle, pour faire réviser des cours d'anglais à 
+                                    des élèves de grande maternelle. Par exemple, Nao pouvait demander de quelle couleur était ses yeux, ou encore de lui montrer une carte avec un certain 
+                                    chiffre inscrit dessus (le robot identifiait les cartes grâce à un code QR).
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-left">
+                        <div class="image-container">
+                            <img src="medias/img/DemocraticRepublicOfCongoCholeraApp.png" alt="Image du l'application">
+                        </div>
+                        <div class="description">
+                            <h3>Application de mise en forme de données sur le Choléra en République Démocratique du Congo</h3>
+                            <div class="text">
+                                <p>
+                                    Pour mon stage de 3<sup>ème</sup> année de licence, réalisé dans le laboratoire Chrono-environnement, le projet concernait des données sur 
+                                    le choléra en République Démocratique du Congo. Il s'agissait ici, de réaliser une application qui permette aux scientifiques de mettre en 
+                                    forme leurs données facilement et sous différents formats et de pouvoir générer des rapports PDF des conclusions qu'ils pouvaient en tirer.
+                                </p>
+                                <p>
+                                    L'application a été réalisée sous la forme d'une application web avec un côté serveur en PHP, et avait pour objectif premier, de proposer 
+                                    ses fonctionnalités de manière ergonomique et simple afin de pouvoir être utilisée par des personnes qui ne sont pas spécialistes en informatique.
+                                    Elle permettait donc d'importer des données puis de les afficher sous forme de tableaux, de graphiques ou encore sur une carte. Une fois 
+                                    que le scientifique avait filtré les données qu'il souhaitait mettre en avant, il pouvait ajouter le tableau, le graphique ou la carte, 
+                                    dans un rapport et ajouter ces commentaires, pour finir par exporter ce rapport en PDF.
+                                </p>
+                                <p>
+                                    Vers la fin du projet, l'application a été déployée sur un serveur du laboratoire pour être accessible en interne.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-right">
+                        <div class="image-container">
+                            <img class="specific-toolbox-maintenance" src="medias/img/ToolboxIndustrialMaintenance.png" alt="Image de l'application">
+                        </div>
+                        <div class="description">
+                            <h3>Trousse à outils d'applications pour une entreprise de maintenance industrielle</h3>
+                            <div class="text">
+                                <p>
+                                    Initialement, j'ai proposé à un membre de ma famille, qui possède une entreprise de maintenance industrielle, de réaliser une 
+                                    application qui lui permettrait de gagner du temps au niveau administratif, et notamment pour la réalisation de ses factures.
+                                </p>
+                                <p>
+                                    Avec sa manière bien à lui de faire les choses, j'ai réalisé cette application web (NodeJS) en m'adaptant à ses besoins, tout en 
+                                    proposant des améliorations possibles dont il n'aurait pas forcément connaissance, comme par exemple l'utilisation de speech-to-text 
+                                    afin de remplir certaines informations en parlant, plutôt que de tout devoir écrire sur un clavier.
+                                </p>
+                                <p>
+                                    Aujourd'hui, je maintiens cette application et ajoute régulièrement des fonctionnalités diverses pour l'aider dans son travail, 
+                                    avec, par exemple, récemment, un système qui lui permet de répertorier son matériel et identifier où il est rangé.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tile-image-skew image-left specific-toolbox">
+                        <div class="image-container">
+                            <img src="medias/img/Toolbox.png" alt="Image de l'application">
+                        </div>
+                        <div class="description">
+                            <h3>Trousse à outils d'applications personnelles</h3>
+                            <div class="text">
+                                <p>
+                                    Comme beaucoup de développeurs je pense, j'ai créé une application permettant de réaliser diverses tâches utiles régulièrement, avec par exemple :
+                                    <ul>
+                                        <li>Un manager de fond d'écrans, avec système d'albums qui change l'image régulièrement</li>
+                                        <li>
+                                            Une application de plannification de tâches, puisque je n'ai jamais trouvé d'outils qui soit capable de faire
+                                            les choses comme je le voulais
+                                        </li>
+                                        <li>
+                                            Un wrapper de youtube-dl (un outil en ligne de commande permettant de télécharger divers contenus sur internet), afin d'éviter de me 
+                                            prendre la tête avec les très nombreux paramètres en ligne de commande
+                                        </li>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                     </li>

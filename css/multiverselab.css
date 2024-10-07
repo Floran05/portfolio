@@ -1,0 +1,184 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  font-family: "Open-Sans", sans-serif;
+  background-color: #1f1f1f;
+}
+html a, body a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+html table, body table {
+  border-collapse: collapse;
+  font-size: inherit;
+}
+html ul, html ol, body ul, body ol {
+  margin: 0;
+  padding: 0;
+}
+html ul li, html ol li, body ul li, body ol li {
+  list-style: none;
+}
+
+nav {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  right: -50px;
+  background-color: #2b2b2b;
+  transform: skew(-30deg, 0);
+}
+nav ul {
+  display: flex;
+  font-size: 1.4em;
+  padding-right: 65px;
+  box-shadow: -2px 2px 15px 1px rgba(0, 0, 0, 0.5);
+}
+nav ul li {
+  padding: 7px 12px;
+  border-left: 3px solid #2b2b2b;
+  border-right: 3px solid #2b2b2b;
+  transition-duration: 0.3s;
+}
+nav ul li:hover {
+  border-left: 3px solid #8b3fff;
+  border-right: 3px solid #8b3fff;
+  color: #8b3fff;
+}
+nav ul li a {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  transform: skew(30deg, 0);
+}
+nav ul li:last-child a {
+  text-transform: lowercase;
+}
+nav ul li:last-child a span {
+  color: #8b3fff;
+}
+
+.table-of-contents {
+  position: sticky;
+  top: 30px;
+  width: calc(20% - 24px - 40px);
+  margin-left: 10%;
+  float: left;
+  border-radius: 5px;
+  padding: 12px 0;
+  background-color: #2c2c2c;
+  transition-duration: 0.3s;
+}
+.table-of-contents .main-section {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.table-of-contents li a {
+  display: block;
+  padding: 4px 12px;
+  transition-duration: 0.3s;
+  background-color: #2c2c2c;
+}
+.table-of-contents li a:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 2px 2px 0 2px #8b3fff, 0px -1px 0 0 #1f1f1f;
+}
+.table-of-contents li li a {
+  padding-left: 25px;
+  font-size: 1.1em;
+}
+
+.wrapper {
+  margin: 0 10% 0 30%;
+  padding: 25px;
+  background-color: #2c2c2c;
+}
+.wrapper h2, .wrapper h3 {
+  text-transform: uppercase;
+}
+.wrapper h3 {
+  margin-left: 25px;
+}
+.wrapper img {
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px 2px #8b3fff;
+  margin: 15px;
+}
+.wrapper .p-link {
+  color: #8b3fff;
+  transition-duration: 0.3s;
+}
+.wrapper .p-link:hover {
+  color: inherit;
+}
+.wrapper .text-image {
+  display: flex;
+  align-items: center;
+}
+.wrapper .text-image img {
+  margin: 0;
+}
+.wrapper .text-image p {
+  padding: 0 20px;
+  text-align: center;
+}
+.wrapper .presentation-image {
+  position: relative;
+  aspect-ratio: 16/5;
+  margin: -25px 0 0 -25px;
+  width: calc(100% + 50px);
+  overflow: hidden;
+}
+.wrapper .presentation-image img {
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  width: 100%;
+}
+.wrapper .presentation-image:after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  bottom: 0;
+  left: -25px;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.wrapper .multiverse-lab-logo {
+  background-color: #505050;
+  border-radius: 5px;
+}
+.wrapper .multiverse-lab-logo img {
+  padding: 10px;
+}
+.wrapper .tile {
+  position: relative;
+  background-color: #393939;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.wrapper .tile .report-date {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-weight: 600;
+}
+.wrapper .tile .ule {
+  margin-left: 40px;
+}
+.wrapper .tile .ule:before {
+  content: "•";
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=multiverselab.css.map */

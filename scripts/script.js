@@ -42,6 +42,21 @@
             droneYearsSpan.textContent = (new Date()).getFullYear() - 2019;
         }
 
+        document.getElementById('switch').addEventListener('click', e => {
+            e.currentTarget.closest('#projects-type-switch').classList.toggle('active');
+            if(e.currentTarget.closest('#projects-type-switch').classList.contains('active')){
+                document.getElementById('video-games-projects').style.display = 'none';
+                document.getElementById('soft-dev-projects').style.display = 'block';
+            }else{
+                document.getElementById('video-games-projects').style.display = 'block';
+                document.getElementById('soft-dev-projects').style.display = 'none';
+            }
+        });
+
+        document.getElementById('mobile-toggle-menu').addEventListener('click', e => {
+            e.currentTarget.closest('nav').classList.toggle('show');
+        });
+
     }
 
     const showPopup = name => {

@@ -1,0 +1,183 @@
+$mainColor: #8b3fff;
+$secondaryColor: #2b2b2b;
+$tertiaryColor: #fff;
+$backgroundColor: #1f1f1f;
+
+$headerHeight: 150px;
+
+html, body{
+    margin: 0;
+	padding: 0;
+	height: 100%;
+    overflow-x: hidden;
+
+	font-size: 16px;
+	line-height: 1.4;
+	color: $tertiaryColor;
+	font-family: 'Open-Sans', sans-serif;
+
+	background-color: $backgroundColor;
+
+	a{text-decoration: none;color: inherit;cursor: pointer;}
+	table{border-collapse: collapse;font-size:inherit;}
+	ul, ol{margin: 0;padding: 0;li{list-style: none;}}
+}
+
+nav{
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: -50px;
+    background-color: $secondaryColor;
+    transform: skew(-30deg, 0);
+    ul{
+        display: flex;
+        font-size: 1.4em;
+        padding-right: 65px;
+        box-shadow: -2px 2px 15px 1px rgba(#000, 0.5);
+        li{
+            padding: 7px 12px;
+            border-left: 3px solid $secondaryColor;
+            border-right: 3px solid $secondaryColor;
+            transition-duration: 0.3s;
+            &:hover{
+                border-left: 3px solid $mainColor;
+                border-right: 3px solid $mainColor;
+                color: $mainColor;
+            }
+            a{
+                display: block;
+                text-transform: uppercase;
+                font-weight: 600;
+                transform: skew(30deg, 0);
+            }
+
+            &:last-child{
+                a{
+                    text-transform: lowercase;
+                    span{color: $mainColor;}
+                }
+            }
+        }
+    }
+}
+
+.table-of-contents{
+    position: sticky;
+    top: 30px;
+    width: calc(20% - 24px - 40px);
+    margin-left: 10%;
+    float: left;
+    border-radius: 5px;
+    padding: 12px 0;
+    background-color: lighten($backgroundColor, 5);
+    transition-duration: 0.3s;
+    //box-shadow: 4px 4px 0px 2px $mainColor;
+    .main-section{
+        font-size: 1.3em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    li{
+        a{
+            display: block;
+            padding: 4px 12px;
+            transition-duration: 0.3s;
+            background-color: lighten($backgroundColor, 5);
+            &:hover{
+                transform: translate(-4px, -4px);
+                box-shadow: 2px 2px 0 2px $mainColor, 0px -1px 0 0 $backgroundColor;
+            }
+        }
+    }
+    li li a{
+        padding-left: 25px;
+        font-size: 1.1em;
+    }
+}
+
+.wrapper{
+    margin: 0 10% 0 30%;
+    padding: 25px;
+    background-color: lighten($backgroundColor, 5);
+
+    h2, h3{
+        text-transform: uppercase;
+    }
+    h3{
+        margin-left: 25px;
+    }
+    img{
+        border-radius: 5px;
+        box-shadow: 4px 4px 0px 2px $mainColor;
+        margin: 15px;
+    }
+    .p-link {
+        color: $mainColor;
+        transition-duration: 0.3s;
+        &:hover{
+            color: inherit;
+        }
+    }
+
+    .text-image{
+        display: flex;
+        align-items: center;
+        img{margin: 0;}
+        p{
+            padding: 0 20px;
+            text-align: center;
+        }
+    }
+
+    .presentation-image{
+        position: relative;
+        aspect-ratio: 16/5;
+        margin: -25px 0 0 -25px;
+        width: calc(100% + 50px);
+        overflow: hidden;
+        img{
+            border-radius: 0;
+            margin: 0;
+            box-shadow: none;
+            width: 100%;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            bottom: 0;
+            left: -25px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+    .multiverse-lab-logo{
+        background-color: #505050;
+        border-radius: 5px;
+        img{padding: 10px;}
+    }
+
+    .tile{
+        position: relative;
+        background-color: lighten($backgroundColor, 10);
+        padding: 12px;
+        border-radius: 5px;
+        margin: 20px 0;
+        .report-date{
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px;
+            font-weight: 600;
+        }
+        .ule{
+            margin-left: 40px;
+            &:before{
+                content: '\002022';
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
